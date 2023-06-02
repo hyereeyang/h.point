@@ -22,20 +22,18 @@ $(function () {
     });
 
 // 각 메뉴 클릭시 애니메이션으로 각 컨텐츠에 위치 이동
-var = menu = $(".menu>ul>li");
-var = con = $("#contents>div");
+var menu = $(".menu>ul>li");
+var con = $("#contents>div");
 
-menu.click(function(){
-    var tg = $ (this);
-    var i =tg.index();
+menu.click(function () {
+    var tg = $(this); // this -> 클릭이벤트가일어난 li(menu)
+    var i = tg.index(); // .index() - 순서값을 나타냄
     var section = con.eq(i);
     var top = section.offset().top;
-    $("html,body").stop().animate({scrolltop:top
-    
+    $("html,body").stop().animate({
+        scrollTop: top
     });
-
 });
-
 });
 
 
